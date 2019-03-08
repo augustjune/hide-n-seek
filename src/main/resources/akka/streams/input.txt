@@ -1,0 +1,5 @@
+This is input file
+Line #2 of input file
+Something new
+Hello
+bew
