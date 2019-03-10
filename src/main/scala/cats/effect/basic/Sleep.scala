@@ -1,4 +1,4 @@
-package cats.io.basic
+package cats.effect.basic
 
 import cats.effect.{IO, Timer}
 

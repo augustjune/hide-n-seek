@@ -1,4 +1,4 @@
-package cats.io.typeclasses
+package cats.effect.typeclasses
 
 import cats.effect.IO
 
