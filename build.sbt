@@ -12,6 +12,9 @@ libraryDependencies ++= Seq(
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.6.0"
 libraryDependencies += "org.typelevel" %% "cats-effect" % "1.2.0"
 
+libraryDependencies += "co.fs2" %% "fs2-core" % "1.0.4" // For cats 1.5.0 and cats-effect 1.1.0
+libraryDependencies += "co.fs2" %% "fs2-io"   % "1.0.4"
+
 scalacOptions ++= Seq(
   "-feature",
   "-deprecation",

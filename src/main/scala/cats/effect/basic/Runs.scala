@@ -4,7 +4,7 @@ import cats.effect.{ExitCode, IO, IOApp}
 import cats.implicits._
 import concurrent.duration._
 
-object ParallelExecution extends IOApp {
+object Runs extends IOApp {
   val start = System.currentTimeMillis()
 
   def runAsyncWithTimer: IO[ExitCode] = for {
