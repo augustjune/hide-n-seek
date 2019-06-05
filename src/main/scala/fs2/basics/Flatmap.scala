@@ -4,7 +4,7 @@ import fs2.{Pure, Stream}
 
 object Flatmap extends App {
 
-  def flatMapRepeat[F, A](base: Stream[F, A]): Stream[F, A] =
+  def flatMapRepeat[F[_], A](base: Stream[F, A]): Stream[F, A] =
     base.flatMap(Stream(_).repeat)
 
   def empty: Stream[Pure, Int] = flatMapRepeat(Stream.empty)

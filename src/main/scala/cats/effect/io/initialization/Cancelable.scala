@@ -36,11 +36,13 @@ object Cancelable {
     IO.cancelable[String] { cb =>
       val isActive = new AtomicBoolean(true)
 
-      try {
-        cb(Right(unsafeFileToString(file, isActive)))
-      } catch {
-        case NonFatal(e) =>
-          cb(Left(e))
+      ec.execute { () =>
+        try {
+          cb(Right(unsafeFileToString(file, isActive)))
+        } catch {
+          case NonFatal(e) =>
+            cb(Left(e))
+        }
       }
 
       // On cancel, signal it
